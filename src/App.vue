@@ -10,7 +10,7 @@ const someThing = ref('Hello')
     <h1>{{ someThing }}</h1>
     <p>This is the parent component.</p>
   </div>
-  <child v-model="someThing" />
+  <child v-model="someThing" type="text" />
 </template>
 
 <style scoped>

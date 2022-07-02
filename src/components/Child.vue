@@ -3,6 +3,7 @@ import { ref, watch } from 'vue'
 
 const props = defineProps({
   modelValue: String,
+  type: String,
 })
 
 const emit = defineEmits(['update:modelValue'])
@@ -16,7 +17,7 @@ watch(value, (newVal) => {
 
 <template>
   <div class="child">
-    <input type="text" v-model="value" />
+    <input v-model="value" :type="props.type" />
     <p>This is the child component.</p>
   </div>
 </template>
